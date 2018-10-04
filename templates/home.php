@@ -1,10 +1,4 @@
-<?php
-
-require_once (__DIR__ . '/layout/header.php');
-
-require_once (__DIR__ . '/layout/footer.php');
-
-?>
+<?php require_once (__DIR__ . '/layout/header.php'); ?>
 
 <!doctype html>
 <html lang="en">
@@ -17,5 +11,13 @@ require_once (__DIR__ . '/layout/footer.php');
 </head>
 <body>
 
+<?php
+
+echo 'yyyyyyyyy';
+
+?>
+
 </body>
 </html>
+
+<?php require_once (__DIR__ . '/layout/footer.php');

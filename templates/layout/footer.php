@@ -1,5 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-<script src="<?= PUBLIC_URL ?>/js/bootstrap.bundle.min.js" defer async </script>
-
-</body>
+</head>
+    <body>
+        <script src="<?= PUBLIC_URL ?>/js/bootstrap.min.js" defer async >
+    </body>
 </html>
+
+
+
+

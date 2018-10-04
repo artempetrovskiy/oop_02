@@ -1,31 +1,13 @@
 <?php
 
-require_once 'C:\xampp\htdocs\oop_02\app\Test.php';
+define('PUBLIC_URL', $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/public');
 
-use App\Test;
+//var_dump($_SERVER);
 
-require_once __DIR__ . '/bootstrap/autoload.php';
-//spl_autoload_register(Autoload::loader);
+$template = isset($_GET['page']) ? $_GET['page'] : 'home';
 
-require_once __DIR__ . '/app/Kernel/Console.php';
-require_once __DIR__ . '/app/Interfaces/IComputer.php';
-require_once __DIR__ . '/app/Models/Computer.php';
-require_once __DIR__ . '/app/Models/Asus.php';
-require_once __DIR__ . '/app/Models/MacBook.php';
+if (!file_exists(__DIR__ . '/templates/home.php')) {
+    $template = '404';
+}
 
-$asus = new Asus();
-$macBook = new MacBook();
-
-
-//var_dump($asus->printParamsByGetters());
-
-
-var_dump($macBook->idenifyComputer());
-
-
-$test = new Test();
-
-$test->testing();
-
-$asus->start();
-
+require_once (__DIR__ . '/templates/home.php');
